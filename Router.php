@@ -1,7 +1,7 @@
 <?php 
 
-	namespace app\core;
-	use app\core\exception\NotFoundException;
+	namespace steven\phpmvc;
+	use steven\phpmvc\exception\NotFoundException;
 
 	class Router {
 
@@ -39,7 +39,7 @@
 			}
 
 			if (is_array($callback)) {
-				/** @var \app\core\Controller $controller */
+				/** @var \steven\phpmvc\Controller $controller */
 				$controller = new $callback[0]();
 				Application::$app->controller = $controller;
 				$controller->action = $callback[1];

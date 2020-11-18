@@ -1,13 +1,13 @@
 <?php 
 
-	namespace app\core;
+	namespace steven\phpmvc;
 
 	class Controller {
 
 		public $layout = 'main';
 		public $action = '';
 
-		/** @var app\core\middlewares\BaseMiddleware[] */
+		/** @var steven\phpmvc\middlewares\BaseMiddleware[] */
 		protected $middlewares = []; // array of middleware classes
 
 		public function setLayout($layout) {
